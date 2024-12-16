@@ -1,0 +1,97 @@
+{% block head %}
+
+<title>Loan Eligibility Prediction</title>
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Loan Eligibility Calculator</h1>
+
+    <div class="form">
+        <form  method="POST">
+            <label for="operation"><h2>
+                Please submit the values from your side and then our system will give you the fair result.
+            </h2></label>
+            <br>
+
+<!-- ['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed',
+       'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount',
+       'Loan_Amount_Term', 'Credit_History', 'Property_Area'] -->
+
+       <label for="gender">Please select the appropriate Gender!</label>
+       <select id="gender" name="gender">
+        <button type="button">Click Me!</button>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <br>
+      <br>
+      <label for="married">Please select the appropriate Married!</label>
+      <select id="married" name="married">
+        <button type="button">Click Me!</button>
+        <option value="Yes">Married</option>
+        <option value="No">Not-Married</option>
+      </select>
+      <br>
+      <br>
+      <label for="dependents">Please select the appropriate Dependents!</label>
+      <select id="dependents" name="dependents">
+        <button type="button">Click Me!</button>
+        <option value=0>Zero Dependent</option>
+        <option value=1>One Dependent</option>
+        <option value=2>Two Dependents</option>
+        <option value=3>More than two Dependents</option>
+      </select>
+      <br><br>
+      <label for="education">Please select the appropriate Education!</label>
+      <select id="education" name="education">
+        <button type="button">Click Me!</button>
+        <option value="Graduate">Graduate</option>
+        <option value="Not Graduate">Under Graduate</option>
+      </select>
+      <br><br>
+      <label for="self_employed">Please select the appropriate Employment!</label>
+      <select id="self_employed" name="self_employed">
+        <button type="button">Click Me!</button>
+        <option value="Yes">Self Employed- Yes</option>
+        <option value="No">Self Employed- No</option>
+      </select>
+      <br><br>
+      <label for="applicantincome" >Please enter the appropriate Employment!</label>
+      <input type="text" name="applicantincome" id="applicantincome" required>
+      <br><br>
+      <label for="coapplicantincome">Please enter the appropriate Co-Applicant Employment!</label>
+      <input type="text" name="coapplicantincome" id="coapplicantincome" required>
+      <br><br>
+      <label for="loanamount" >Please enter the appropriate LoanAmount!</label>
+      <input type="text" name="loanamount" id="loanamount" required>
+      <br><br>
+      <label for="loanamountterm">Please enter the appropriate Loan Term you want to pursue!</label>
+      <input type="text" name="loanamountterm" id="loanamountterm" required>
+      <br><br>
+      <label for="credithistory">Please select the Credit History!</label>
+        <select id="credithistory" name="credithistory">
+        <button type="button">Click Me!</button>
+        <option value=1>Any sanctioned loan in past-1</option>
+        <option value=0>Any sanctioned loan in past-0</option>
+        </select>
+        <br><br> 
+        <label for="propertyarea">Please select the Property Area!</label>
+        <select id="propertyarea" name="propertyarea">
+        <button type="button">Click Me!</button>
+        <option value="Urban">Urban</option>
+        <option value="Rural">Rural</option>
+        <option value="Semiurban">Semi-Urban</option><br><br>
+        </select>
+        <br><br>    
+        <input type="submit" value="Show me the Values" formaction="/input_show">
+            <input type="submit" value="Loan Eligibility Check" formaction="/loan">
+
+        </form>
+        
+    </div>
+</div>
+<div>
+</div>
+{% endblock %}
