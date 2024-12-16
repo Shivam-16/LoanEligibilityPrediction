@@ -55,3 +55,4 @@ Prediction:
 The model predicts whether the user is eligible for a loan.
 Display Result:
 Show "Eligible" or "Not Eligible" along with key decision factors. -->
+# LoanEligibilityPrediction
